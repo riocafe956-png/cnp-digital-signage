@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>RGCGISD CNP Digital Signage</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #071b33;
+    }
+
+    .screen {
+      width: 100vw;
+      height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background:
+        radial-gradient(circle at top right, #2878c7, transparent 40%),
+        linear-gradient(135deg, #071b33, #123d72);
+
+      color: white;
+      text-align: center;
+    }
+
+    .content {
+      padding: 40px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 12px 28px;
+      margin-bottom: 30px;
+
+      border: 2px solid rgba(255,255,255,.25);
+      background: rgba(255,255,255,.12);
+      border-radius: 50px;
+
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(60px, 7vw, 125px);
+      line-height: 1;
+    }
+
+    h2 {
+      margin: 25px 0 10px;
+      font-size: clamp(36px, 4vw, 70px);
+      color: #f6c344;
+    }
+
+    .message {
+      margin-top: 35px;
+      font-size: clamp(24px, 2vw, 40px);
+    }
+
+    .online {
+      position: absolute;
+      bottom: 25px;
+      left: 0;
+      right: 0;
+
+      font-size: 18px;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,.65);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="screen">
+
+    <div class="content">
+
+      <div class="badge">
+        RGCGISD CHILD NUTRITION PROGRAM
+      </div>
+
+      <h1>CNP DIGITAL SIGNAGE</h1>
+
+      <h2>Fueling Futures</h2>
+
+      <div class="message">
+        Office TV • Online Signage Test
+      </div>
+
+    </div>
+
+    <div class="online">
+      ● ONLINE • RGCGISD CNP SIGNAGE NETWORK
+    </div>
+
+  </div>
+
+</body>
+</html>
