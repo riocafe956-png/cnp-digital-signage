@@ -158,6 +158,10 @@ if (
   showLogoOnly();
   return;
 }
+
+    // Hide the logo screen when today's lunch menu is available.
+hideLogoOnly();
+    
     const items=menu.lunchItems.filter(Boolean);
     const entree=menu.featuredEntree||items.find(item=>/pizza|wings|chicken|burger|taco|tamale|pasta|spaghetti|beef|fish|sandwich|flauta|tenders/i.test(item))||items[0];
     document.getElementById('featured').textContent=entree;
