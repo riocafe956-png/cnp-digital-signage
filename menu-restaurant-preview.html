@@ -99,6 +99,30 @@ function iconForItem(item){
   if(/sauce|dip|marinara/.test(name))return '🥣';
   return '✦';
 }
+
+  function showLogoOnly() {
+  document.body.innerHTML = `
+    <div style="
+      position:fixed;
+      inset:0;
+      background:#071a33;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    ">
+      <img
+        src="./food-images/cnp-logo.png"
+        alt="RGCGISD Child Nutrition Program"
+        style="
+          width:min(65vw,650px);
+          max-height:75vh;
+          object-fit:contain;
+        "
+      >
+    </div>
+  `;
+}
+  
 async function loadLunchMenu(){
   try{
     const response=await fetch(MENU_URL+'?t='+Date.now(),{cache:'no-store'});
