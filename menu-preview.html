@@ -399,15 +399,19 @@ async function loadLunchMenu() {
     photo.style.objectFit =
       menu.featuredPhoto ? 'cover' : 'contain';
 
+    
     photo.src = photoUrl + '?t=' + Date.now();
 
-
+  } catch (error) {
+    showMessage('Unable to load today’s lunch menu.');
+    console.error(error);
+  }
+}
 
 loadLunchMenu();
 
 // Refresh menu information every minute.
 setInterval(loadLunchMenu, 60000);
 </script>
-
 </body>
 </html>
