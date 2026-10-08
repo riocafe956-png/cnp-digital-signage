@@ -78,7 +78,14 @@ function showMessage(message){
 function setFeaturedPhoto(photo){
   const image=document.getElementById('foodPhoto');
   const frame=document.getElementById('photoFrame');
-  const url=photo?.url || (photo ? FEATURED_PHOTO_URL : FALLBACK_URL);
+  const isPizzaWings =
+  /pizza\s*&\s*wings/i.test(
+    document.getElementById('featured').textContent
+  );
+
+const url = photo && isPizzaWings
+  ? './food-images/pizza-and-wings-enhanced.png'
+  : photo?.url || (photo ? FEATURED_PHOTO_URL : FALLBACK_URL);
   frame.classList.toggle('is-fallback',!photo);
   image.onerror=function(){image.onerror=null;frame.classList.add('is-fallback');image.src=FALLBACK_URL;};
   image.src=url+(url.includes('?')?'&':'?')+'t='+Date.now();
