@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grulla High School | Lunch Menu</title>
+<style>
+:root{--navy:#071b35;--navy2:#123b62;--gold:#f3c75c;--cream:#fffaf0;--ink:#0d2b4c}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif;background:var(--navy);color:white}
+.screen{min-height:100vh;padding:clamp(16px,2vw,36px);display:flex;flex-direction:column;gap:clamp(12px,1.5vw,25px);background:radial-gradient(ellipse at 92% 2%,rgba(62,128,176,.38),transparent 42%),radial-gradient(ellipse at 0 95%,rgba(232,175,59,.13),transparent 37%),linear-gradient(135deg,#06172c,#12375c)}
+.header{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand-group{display:flex;align-items:center;gap:clamp(14px,1.6vw,26px);min-width:0}
+.brand-logo{width:clamp(64px,7vw,112px);height:clamp(64px,7vw,112px);object-fit:contain;flex:none;filter:drop-shadow(0 4px 8px rgba(0,0,0,.3))}
+.brand{color:var(--gold);font-size:clamp(11px,1.1vw,19px);font-weight:900;letter-spacing:2px}
+h1{margin:7px 0 0;font-size:clamp(29px,3.5vw,66px);line-height:1;letter-spacing:.4px}
+.date{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:14px 20px;font-size:clamp(13px,1.25vw,24px);white-space:nowrap}
+.ribbon{display:flex;align-items:center;justify-content:space-between;gap:18px;background:linear-gradient(95deg,#d89a25,#ffe184);border-radius:14px;padding:clamp(12px,1.3vw,23px) clamp(16px,2vw,36px);color:var(--navy);box-shadow:0 10px 24px rgba(0,0,0,.2)}
+.ribbon strong{font-size:clamp(24px,3.2vw,58px);letter-spacing:1px}
+.ribbon span{font-size:clamp(12px,1.25vw,24px);font-weight:800;text-align:right}
+.menu-board{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,43fr) minmax(0,57fr);gap:clamp(12px,1.5vw,26px)}
+.feature-panel{background:linear-gradient(160deg,#174569,#071a33);border:2px solid #d8ac47;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 14px 26px rgba(0,0,0,.16)}
+.photo-frame{height:clamp(230px,35vh,440px);position:relative;overflow:hidden;background:radial-gradient(circle,#2c5671,#071a33)}
+.photo-frame img{display:block;width:100%;height:100%;object-fit:cover}
+.photo-frame.is-fallback img{object-fit:contain;padding:30px}
+.photo-frame::after{content:"";position:absolute;inset:auto 0 0;height:25%;background:linear-gradient(transparent,rgba(4,19,39,.4));pointer-events:none}
+.feature-copy{padding:clamp(18px,2vw,36px);text-align:center;display:flex;flex:1;flex-direction:column;justify-content:center}
+.feature-label{color:var(--gold);font-size:clamp(15px,1.5vw,27px);font-weight:900;letter-spacing:2px;text-transform:uppercase}
+.feature-name{font-size:clamp(32px,3.2vw,65px);font-weight:900;line-height:1.08;margin-top:12px;overflow-wrap:anywhere}
+.selection-panel{background:var(--cream);border:2px solid #e3b347;border-radius:20px;padding:clamp(20px,2.2vw,40px);color:var(--ink);display:flex;flex-direction:column;box-shadow:0 14px 26px rgba(0,0,0,.13)}
+.selection-heading{font-size:clamp(26px,2.7vw,52px);font-weight:900;border-bottom:4px solid #e3b347;padding-bottom:12px;margin-bottom:clamp(16px,1.6vw,28px)}
+.menu-items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,1vw,20px);align-content:start}
+.menu-item{display:flex;align-items:center;gap:12px;min-height:clamp(62px,6.4vh,100px);border-radius:13px;padding:12px 14px;background:#edf2f7;border-left:5px solid #e3b347;font-size:clamp(17px,1.55vw,30px);font-weight:800;line-height:1.18;overflow-wrap:anywhere}
+.menu-item .symbol{font-size:clamp(21px,1.9vw,34px);flex:none}
+.menu-item .item-text{min-width:0}
+.status{grid-column:1/-1;text-align:center;font-size:clamp(18px,2vw,32px);color:#64748b;padding:30px}
+.footer{display:flex;justify-content:space-between;gap:14px;color:#f9d77e;font-size:clamp(12px,1.05vw,21px);font-weight:800}
+@media(max-width:800px){.header{flex-wrap:wrap}.date{white-space:normal}.menu-board{grid-template-columns:1fr}.menu-items{grid-template-columns:1fr 1fr}.ribbon span{display:none}.footer{flex-wrap:wrap}.photo-frame{height:300px}}
+@media(max-width:480px){.menu-items{grid-template-columns:1fr}.brand-logo{width:58px;height:58px}.brand{letter-spacing:1px}.footer{flex-direction:column}.feature-copy{padding:22px}}
+</style>
+</head>
+<body>
+<div class="screen">
+  <header class="header">
+    <div class="brand-group">
+      <img class="brand-logo" src="./food-images/cnp-logo.png" alt="RGCGISD Child Nutrition Program logo">
+      <div><div class="brand">RGCGISD CHILD NUTRITION PROGRAM</div><h1 id="campus">GRULLA HIGH SCHOOL</h1></div>
+    </div>
+    <div class="date" id="menuDate">Loading date...</div>
+  </header>
+  <div class="ribbon"><strong>TODAY'S LUNCH MENU</strong><span>FRESH • DELICIOUS • FUELING FUTURES</span></div>
+  <main class="menu-board">
+    <section class="feature-panel">
+      <div class="photo-frame is-fallback" id="photoFrame"><img id="foodPhoto" src="./food-images/cnp-logo.png" alt="Featured lunch image"></div>
+      <div class="feature-copy"><div class="feature-label">Today's Featured Entrée</div><div class="feature-name" id="featured">Loading...</div></div>
+    </section>
+    <section class="selection-panel"><div class="selection-heading">TODAY'S SELECTIONS</div><div class="menu-items" id="menuItems"><div class="status">Loading lunch menu...</div></div></section>
+  </main>
+  <footer class="footer"><span>FUELING FUTURES</span><span>Menu subject to change</span><span>This institution is an equal opportunity provider.</span></footer>
+</div>
+<script>
+const MENU_URL = './grulla-lunch-menu.json';
+const FALLBACK_URL = './food-images/cnp-logo.png';
+// Current photo publisher creates this file. A later step will make
+// the publisher provide a URL for any supported image extension.
+const FEATURED_PHOTO_URL = './food-images/grulla-featured.jpg';
+function localToday(){
+  const parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+  const get=type=>parts.find(p=>p.type===type).value;
+  return get('year')+'-'+get('month')+'-'+get('day');
+}
+function showMessage(message){
+  document.getElementById('featured').textContent='Lunch Menu';
+  const container=document.getElementById('menuItems');container.replaceChildren();
+  const item=document.createElement('div');item.className='status';item.textContent=message;container.appendChild(item);
+  setFeaturedPhoto(null);
+}
+function setFeaturedPhoto(photo){
+  const image=document.getElementById('foodPhoto');
+  const frame=document.getElementById('photoFrame');
+  const url=photo?.url || (photo ? FEATURED_PHOTO_URL : FALLBACK_URL);
+  frame.classList.toggle('is-fallback',!photo);
+  image.onerror=function(){image.onerror=null;frame.classList.add('is-fallback');image.src=FALLBACK_URL;};
+  image.src=url+(url.includes('?')?'&':'?')+'t='+Date.now();
+}
+function iconForItem(item){
+  const name=String(item).toLowerCase();
+  if(/yogurt|milk|cheese/.test(name))return '🥛';
+  if(/salad|lettuce/.test(name))return '🥗';
+  if(/cauliflower|broccoli|vegetable|carrot/.test(name))return '🥦';
+  if(/orange|grapefruit|fruit|apple|melon|berry/.test(name))return '🍊';
+  if(/sauce|dip|marinara/.test(name))return '🥣';
+  return '✦';
+}
+async function loadLunchMenu(){
+  try{
+    const response=await fetch(MENU_URL+'?t='+Date.now(),{cache:'no-store'});
+    if(!response.ok)throw new Error('Menu file unavailable');
+    const menu=await response.json();
+    document.getElementById('campus').textContent=menu.campus||'GRULLA HIGH SCHOOL';
+    document.getElementById('menuDate').textContent=menu.displayDate||'';
+    if(menu.date!==localToday()){showMessage("Today's menu has not been published yet.");return;}
+    if(menu.status!=='AVAILABLE'||!Array.isArray(menu.lunchItems)||menu.lunchItems.length===0){
+      showMessage(menu.status==='NO_CLASS'?'No Classes Today':'No lunch menu available today.');return;
+    }
+    const items=menu.lunchItems.filter(Boolean);
+    const entree=menu.featuredEntree||items.find(item=>/pizza|wings|chicken|burger|taco|tamale|pasta|spaghetti|beef|fish|sandwich|flauta|tenders/i.test(item))||items[0];
+    document.getElementById('featured').textContent=entree;
+    const container=document.getElementById('menuItems');container.replaceChildren();
+    items.filter(item=>item!==entree).forEach(function(item){
+      const element=document.createElement('div');element.className='menu-item';
+      const symbol=document.createElement('span');symbol.className='symbol';symbol.setAttribute('aria-hidden','true');symbol.textContent=iconForItem(item);
+      const label=document.createElement('span');label.className='item-text';label.textContent=item;
+      element.append(symbol,label);container.appendChild(element);
+    });
+    setFeaturedPhoto(menu.featuredPhoto);
+  }catch(error){showMessage('Unable to load today’s lunch menu.');console.error(error);}
+}
+loadLunchMenu();
+setInterval(loadLunchMenu,60000);
+</script>
+</body>
+</html>
