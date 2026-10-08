@@ -14,5 +14,8 @@
     "Texas Fruit Grapefruit",
     "Texas Fruit Juicy Orange"
   ],
-  "duration": 30
+  "duration": 30,
+  "featuredEntree": "Pizza & Wings",
+  "featuredPhoto": null,
+  "fallbackImage": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/cnp-logo.png"
 }
