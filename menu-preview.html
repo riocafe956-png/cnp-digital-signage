@@ -361,10 +361,14 @@ async function loadLunchMenu() {
     // Display a matching food photo when a
     // published image URL is available.
     // Otherwise, show the official CNP logo.
-    const photoUrl =
-      menu.featuredPhoto?.url ||
-      menu.fallbackImage ||
-      './food-images/cnp-logo.png';
+    
+    // Use the published cafeteria food photograph.
+    // Fall back to the official CNP logo when unavailable.
+    const fallbackUrl = './food-images/cnp-logo.png';
+
+    const photoUrl = menu.featuredPhoto
+      ? './food-images/grulla-featured.jpg'
+      : fallbackUrl;
 
     let photo = document.getElementById('foodPhoto');
 
@@ -372,34 +376,31 @@ async function loadLunchMenu() {
       photo = document.createElement('img');
       photo.id = 'foodPhoto';
       photo.alt = 'Featured lunch image';
-      photo.style.width = '300px';
-photo.style.height = '260px';
-photo.style.objectFit = 'contain';
-photo.style.display = 'block';
-photo.style.margin = '0 auto 15px';
-      photo.style.borderRadius = '14px';
 
-      const featured =
-        document.getElementById('featured');
+      photo.style.width = '100%';
+      photo.style.maxWidth = '480px';
+      photo.style.height = '300px';
+      photo.style.objectFit = 'cover';
+      photo.style.display = 'block';
+      photo.style.margin = '0 auto 20px';
+      photo.style.borderRadius = '18px';
 
-      featured.parentElement.insertBefore(
-        photo,
-        featured
-      );
+      const featured = document.getElementById('featured');
+
+      featured.parentElement.insertBefore(photo, featured);
     }
 
     photo.onerror = function() {
       photo.onerror = null;
-      photo.src = './food-images/cnp-logo.png';
+      photo.src = fallbackUrl;
+      photo.style.objectFit = 'contain';
     };
 
-    photo.src = photoUrl;
+    photo.style.objectFit =
+      menu.featuredPhoto ? 'cover' : 'contain';
 
-  } catch (error) {
-    showMessage('Unable to load today’s lunch menu.');
-    console.error(error);
-  }
-}
+    photo.src = photoUrl + '?t=' + Date.now();
+
 
 
 loadLunchMenu();
