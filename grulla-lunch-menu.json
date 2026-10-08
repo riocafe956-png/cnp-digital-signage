@@ -18,7 +18,8 @@
   "featuredEntree": "Pizza & Wings",
   "featuredPhoto": {
     "fileId": "1r6PP7bxTe3qlsb16XOQvcfTvMggltjm2",
-    "name": "Pizza & Wings"
+    "name": "Pizza & Wings",
+    "url": "./food-images/pizza-and-wings-enhanced.png"
   },
   "fallbackImage": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/cnp-logo.png"
 }
