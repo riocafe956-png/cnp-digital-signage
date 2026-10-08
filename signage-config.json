@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "district": "RGCGISD CNP",
+  "timezone": "America/Chicago",
+  "refreshSeconds": 60,
+  "campuses": {
+    "Alto Bonito Elementary": {
+      "slides": []
+    },
+    "Barrera Elementary": {
+      "slides": []
+    },
+    "CNP Office Staff": {
+      "slides": []
+    },
+    "Grulla Elementary": {
+      "slides": []
+    },
+    "Grulla High School": {
+      "slides": []
+    },
+    "Grulla Middle School": {
+      "slides": []
+    },
+    "J&O Elementary": {
+      "slides": []
+    },
+    "La Union Elementary": {
+      "slides": []
+    },
+    "Ramirez Elementary": {
+      "slides": []
+    },
+    "Ringgold Elementary": {
+      "slides": []
+    },
+    "Ringgold Middle School": {
+      "slides": []
+    },
+    "Rio Grande City High School": {
+      "slides": []
+    },
+    "Roque Guerra Elementary": {
+      "slides": []
+    },
+    "Sanchez Elementary": {
+      "slides": []
+    },
+    "Veterans Middle School": {
+      "slides": []
+    }
+  }
+}
