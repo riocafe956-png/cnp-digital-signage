@@ -1,0 +1,42 @@
+
+{
+  "version": 1,
+  "defaultImage": "food-images/default.jpg",
+  "foods": [
+    {
+      "name": "Pizza & Wings",
+      "keywords": ["pizza", "wings"],
+      "image": "food-images/pizza-wings.jpg"
+    },
+    {
+      "name": "Tacos",
+      "keywords": ["taco"],
+      "image": "food-images/tacos.jpg"
+    },
+    {
+      "name": "Hamburgers",
+      "keywords": ["hamburger", "cheeseburger", "burger"],
+      "image": "food-images/hamburgers.jpg"
+    },
+    {
+      "name": "Chicken Sandwich",
+      "keywords": ["chicken sandwich"],
+      "image": "food-images/chicken-sandwich.jpg"
+    },
+    {
+      "name": "Chicken Nuggets",
+      "keywords": ["chicken nuggets", "nuggets"],
+      "image": "food-images/chicken-nuggets.jpg"
+    },
+    {
+      "name": "Spaghetti",
+      "keywords": ["spaghetti"],
+      "image": "food-images/spaghetti.jpg"
+    },
+    {
+      "name": "Tamales",
+      "keywords": ["tamales", "tamale"],
+      "image": "food-images/tamales.jpg"
+    }
+  ]
+}
