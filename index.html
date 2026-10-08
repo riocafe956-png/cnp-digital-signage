@@ -3,146 +3,182 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
   <title>RGCGISD CNP Digital Signage</title>
 
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     html, body {
       margin: 0;
       width: 100%;
       height: 100%;
       overflow: hidden;
-      font-family: Arial, sans-serif;
       background: #071b33;
-      color: white;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
-    .slide {
+    #slide {
+      width: 100vw;
+      height: 100vh;
+      object-fit: contain;
+      display: none;
+      background: #071b33;
+    }
+
+    #standby {
       position: absolute;
       inset: 0;
-      display: none;
+      display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 5vw;
+      padding: 30px;
+      color: white;
+      background:
+        linear-gradient(135deg, #071b33, #164b7e);
     }
 
-    .slide.active {
-      display: flex;
-      animation: fadeIn 0.8s ease;
+    #standby h1 {
+      font-size: clamp(28px, 5vw, 65px);
+      margin-bottom: 15px;
     }
 
-    .slide1 {
-      background: linear-gradient(135deg, #071b33, #246bb0);
+    #standby h2 {
+      font-size: clamp(20px, 3vw, 36px);
+      font-weight: normal;
     }
 
-    .slide2 {
-      background: linear-gradient(135deg, #155e42, #49a66a);
-    }
-
-    .slide3 {
-      background: linear-gradient(135deg, #603b91, #d65c91);
-    }
-
-    .badge {
-      display: inline-block;
-      border: 2px solid rgba(255,255,255,.4);
-      border-radius: 40px;
-      padding: 12px 28px;
-      margin-bottom: 35px;
-      font-size: clamp(16px, 2vw, 26px);
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-
-    h1 {
-      font-size: clamp(44px, 7vw, 120px);
-      line-height: 1.05;
-      margin: 0;
-    }
-
-    h2 {
-      font-size: clamp(30px, 4vw, 70px);
-      color: #ffe082;
-      margin: 25px 0;
-    }
-
-    p {
-      font-size: clamp(22px, 2.5vw, 42px);
-      line-height: 1.4;
-    }
-
-    .footer {
-      position: absolute;
-      bottom: 25px;
-      left: 0;
-      right: 0;
-      text-align: center;
-      font-size: clamp(13px, 1.4vw, 20px);
-      letter-spacing: 1px;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    #standby p {
+      font-size: 20px;
+      color: #d7e6f5;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- SLIDE 1 -->
-  <section class="slide slide1 active">
-    <div>
-      <div class="badge">RGCGISD CHILD NUTRITION PROGRAM</div>
-      <h1>CNP DIGITAL SIGNAGE</h1>
-      <h2>Fueling Futures</h2>
-      <p>Welcome to Our Office TV!</p>
-    </div>
-    <div class="footer">RGCGISD CNP • DIGITAL SIGNAGE NETWORK</div>
-  </section>
+  <img id="slide" alt="CNP Digital Signage">
 
-  <!-- SLIDE 2 -->
-  <section class="slide slide2">
-    <div>
-      <div class="badge">FARM FRESH</div>
-      <h1>FRESH & HEALTHY!</h1>
-      <h2>Eat More Fruits & Vegetables</h2>
-      <p>Colorful choices help fuel healthy students!</p>
-    </div>
-    <div class="footer">RGCGISD CHILD NUTRITION PROGRAM</div>
-  </section>
-
-  <!-- SLIDE 3 -->
-  <section class="slide slide3">
-    <div>
-      <div class="badge">CNP CELEBRATIONS</div>
-      <h1>LET'S CELEBRATE!</h1>
-      <h2>National Food Days</h2>
-      <p>Great meals. Great nutrition. Great students.</p>
-    </div>
-    <div class="footer">FUELING FUTURES • RGCGISD CNP</div>
-  </section>
+  <div id="standby">
+    <h1>RGCGISD</h1>
+    <h2>Child Nutrition Program</h2>
+    <p>Fueling Futures</p>
+    <p id="status">Loading campus announcements...</p>
+  </div>
 
   <script>
-    const slides = document.querySelectorAll('.slide');
-    let currentSlide = 0;
+    const CAMPUS = "CNP Office Staff";
 
-    function nextSlide() {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add('active');
+    const CONFIG_URL = "./signage-config.json";
+
+    const REFRESH_MS = 60000;
+
+    const slideElement = document.getElementById("slide");
+    const standbyElement = document.getElementById("standby");
+    const statusElement = document.getElementById("status");
+
+    let slides = [];
+    let currentIndex = 0;
+    let slideTimer = null;
+    let playlistSignature = "";
+
+    function showStandby(message) {
+      clearTimeout(slideTimer);
+      slideElement.style.display = "none";
+      standbyElement.style.display = "flex";
+      statusElement.textContent = message;
     }
 
-    // Change slides every 10 seconds
-    setInterval(nextSlide, 10000);
+    function showNextSlide() {
+      clearTimeout(slideTimer);
 
-    // Reload every 5 minutes for published updates
+      if (slides.length === 0) {
+        showStandby("No announcements scheduled.");
+        return;
+      }
+
+      if (currentIndex >= slides.length) {
+        currentIndex = 0;
+      }
+
+      const slide = slides[currentIndex];
+
+      slideElement.src = slide.url;
+      slideElement.style.display = "block";
+      standbyElement.style.display = "none";
+
+      currentIndex = (currentIndex + 1) % slides.length;
+
+      slideTimer = setTimeout(
+        showNextSlide,
+        slide.duration * 1000
+      );
+    }
+
+    async function loadPlaylist() {
+      try {
+        const response = await fetch(
+          CONFIG_URL + "?t=" + Date.now(),
+          { cache: "no-store" }
+        );
+
+        if (!response.ok) {
+          throw new Error("Configuration unavailable");
+        }
+
+        const config = await response.json();
+
+        const campusData = config.campuses?.[CAMPUS];
+
+        const newSlides = (campusData?.slides || [])
+          .filter(item =>
+            typeof item.url === "string" &&
+            item.url.startsWith(
+              "https://riocafe956-png.github.io/cnp-digital-signage/signage-images/"
+            ) &&
+            Number.isFinite(Number(item.duration)) &&
+            Number(item.duration) >= 5 &&
+            Number(item.duration) <= 120
+          )
+          .map(item => ({
+            url: item.url,
+            duration: Number(item.duration)
+          }));
+
+        const newSignature = JSON.stringify(newSlides);
+
+        if (newSignature !== playlistSignature) {
+          playlistSignature = newSignature;
+          slides = newSlides;
+          currentIndex = 0;
+          showNextSlide();
+        }
+
+      } catch (error) {
+        console.error("Playlist error:", error);
+
+        if (slides.length === 0) {
+          showStandby(
+            "Waiting for campus announcements..."
+          );
+        }
+      }
+    }
+
+    loadPlaylist();
+
+    setInterval(loadPlaylist, REFRESH_MS);
+
+    // Daily refresh for long-running TVs.
     setInterval(() => {
       window.location.reload();
-    }, 300000);
+    }, 24 * 60 * 60 * 1000);
   </script>
 
 </body>
