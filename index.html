@@ -1,114 +1,149 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>RGCGISD CNP Digital Signage</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     html, body {
       margin: 0;
       width: 100%;
       height: 100%;
       overflow: hidden;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Arial, sans-serif;
       background: #071b33;
+      color: white;
     }
 
-    .screen {
-      width: 100vw;
-      height: 100vh;
-
-      display: flex;
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
       align-items: center;
       justify-content: center;
-
-      background:
-        radial-gradient(circle at top right, #2878c7, transparent 40%),
-        linear-gradient(135deg, #071b33, #123d72);
-
-      color: white;
       text-align: center;
+      padding: 5vw;
     }
 
-    .content {
-      padding: 40px;
+    .slide.active {
+      display: flex;
+      animation: fadeIn 0.8s ease;
+    }
+
+    .slide1 {
+      background: linear-gradient(135deg, #071b33, #246bb0);
+    }
+
+    .slide2 {
+      background: linear-gradient(135deg, #155e42, #49a66a);
+    }
+
+    .slide3 {
+      background: linear-gradient(135deg, #603b91, #d65c91);
     }
 
     .badge {
       display: inline-block;
+      border: 2px solid rgba(255,255,255,.4);
+      border-radius: 40px;
       padding: 12px 28px;
-      margin-bottom: 30px;
-
-      border: 2px solid rgba(255,255,255,.25);
-      background: rgba(255,255,255,.12);
-      border-radius: 50px;
-
-      font-size: 24px;
-      font-weight: 700;
+      margin-bottom: 35px;
+      font-size: clamp(16px, 2vw, 26px);
+      font-weight: bold;
       letter-spacing: 2px;
     }
 
     h1 {
+      font-size: clamp(44px, 7vw, 120px);
+      line-height: 1.05;
       margin: 0;
-      font-size: clamp(60px, 7vw, 125px);
-      line-height: 1;
     }
 
     h2 {
-      margin: 25px 0 10px;
-      font-size: clamp(36px, 4vw, 70px);
-      color: #f6c344;
+      font-size: clamp(30px, 4vw, 70px);
+      color: #ffe082;
+      margin: 25px 0;
     }
 
-    .message {
-      margin-top: 35px;
-      font-size: clamp(24px, 2vw, 40px);
+    p {
+      font-size: clamp(22px, 2.5vw, 42px);
+      line-height: 1.4;
     }
 
-    .online {
+    .footer {
       position: absolute;
       bottom: 25px;
       left: 0;
       right: 0;
-
-      font-size: 18px;
+      text-align: center;
+      font-size: clamp(13px, 1.4vw, 20px);
       letter-spacing: 1px;
-      color: rgba(255,255,255,.65);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="screen">
-
-    <div class="content">
-
-      <div class="badge">
-        RGCGISD CHILD NUTRITION PROGRAM
-      </div>
-
+  <!-- SLIDE 1 -->
+  <section class="slide slide1 active">
+    <div>
+      <div class="badge">RGCGISD CHILD NUTRITION PROGRAM</div>
       <h1>CNP DIGITAL SIGNAGE</h1>
-
       <h2>Fueling Futures</h2>
-
-      <div class="message">
-        Office TV • Online Signage Test
-      </div>
-
+      <p>Welcome to Our Office TV!</p>
     </div>
+    <div class="footer">RGCGISD CNP • DIGITAL SIGNAGE NETWORK</div>
+  </section>
 
-    <div class="online">
-      ● ONLINE • RGCGISD CNP SIGNAGE NETWORK
+  <!-- SLIDE 2 -->
+  <section class="slide slide2">
+    <div>
+      <div class="badge">FARM FRESH</div>
+      <h1>FRESH & HEALTHY!</h1>
+      <h2>Eat More Fruits & Vegetables</h2>
+      <p>Colorful choices help fuel healthy students!</p>
     </div>
+    <div class="footer">RGCGISD CHILD NUTRITION PROGRAM</div>
+  </section>
 
-  </div>
+  <!-- SLIDE 3 -->
+  <section class="slide slide3">
+    <div>
+      <div class="badge">CNP CELEBRATIONS</div>
+      <h1>LET'S CELEBRATE!</h1>
+      <h2>National Food Days</h2>
+      <p>Great meals. Great nutrition. Great students.</p>
+    </div>
+    <div class="footer">FUELING FUTURES • RGCGISD CNP</div>
+  </section>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function nextSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+
+    // Change slides every 10 seconds
+    setInterval(nextSlide, 10000);
+
+    // Reload every 5 minutes for published updates
+    setInterval(() => {
+      window.location.reload();
+    }, 300000);
+  </script>
 
 </body>
 </html>
