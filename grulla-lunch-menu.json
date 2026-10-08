@@ -1,0 +1,18 @@
+{
+  "campus": "Grulla High School",
+  "date": "2026-10-08",
+  "displayDate": "Thursday, October 8, 2026",
+  "status": "AVAILABLE",
+  "title": "TODAY'S LUNCH MENU",
+  "lunchItems": [
+    "Fruitastic Yogurt Tray",
+    "Pizza & Wings",
+    "Fresh Garden Salad",
+    "Roasted Cauliflor",
+    "Buffalo Roasted Cauliflower",
+    "Marinara Dipping Sauce",
+    "Texas Fruit Grapefruit",
+    "Texas Fruit Juicy Orange"
+  ],
+  "duration": 30
+}
