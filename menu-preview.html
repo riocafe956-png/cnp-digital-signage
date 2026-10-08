@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grulla High School | Today's Menu</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #102c50;
+  color: white;
+}
+.screen {
+  min-height: 100vh;
+  padding: 3vw;
+  background: radial-gradient(circle at top right, #235b87, #102c50 70%);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2vw;
+}
+.brand {
+  color: #f4cc76;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 1.1vw;
+}
+h1 { font-size: 3.3vw; margin: 10px 0; }
+.subtitle {
+  font-size: 2vw;
+  color: #f4cc76;
+  font-weight: bold;
+}
+.date {
+  font-size: 1.4vw;
+  background: #ffffff20;
+  padding: 15px 25px;
+  border-radius: 15px;
+}
+.menus {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2vw;
+}
+.menu {
+  background: white;
+  color: #173d67;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px #0003;
+}
+.photo {
+  height: 23vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8vw;
+  background: #f6e9d5;
+}
+.lunch .photo { background: #e7f3dd; }
+.content { padding: 2vw; }
+h2 { font-size: 2.4vw; margin: 0 0 1vw; }
+.featured {
+  font-size: 2.1vw;
+  font-weight: bold;
+  margin-bottom: 1vw;
+}
+.items {
+  font-size: 1.35vw;
+  line-height: 1.6;
+  color: #475569;
+}
+.footer {
+  text-align: center;
+  margin-top: 2vw;
+  font-size: 1.1vw;
+  color: #c7d9eb;
+}
+</style>
+</head>
+<body>
+<div class="screen">
+  <div class="header">
+    <div>
+      <div class="brand">RGCGISD CHILD NUTRITION PROGRAM</div>
+      <h1>GRULLA HIGH SCHOOL</h1>
+      <div class="subtitle">TODAY'S MENU</div>
+    </div>
+    <div class="date">Thursday, October 8, 2026</div>
+  </div>
+
+  <div class="menus">
+    <section class="menu breakfast">
+      <div class="photo">🫔</div>
+      <div class="content">
+        <h2>☀️ Breakfast</h2>
+        <div class="featured">Tamales</div>
+        <div class="items">
+          Frosted Flakes Cereal<br>
+          Fresh Juicy Orange / Craisin Crunch Pack<br>
+          Assorted Milk
+        </div>
+      </div>
+    </section>
+
+    <section class="menu lunch">
+      <div class="photo">🍕 🍗</div>
+      <div class="content">
+        <h2>🍽️ Lunch</h2>
+        <div class="featured">Pizza &amp; Wings</div>
+        <div class="items">
+          Fruitastic Yogurt Tray<br>
+          Fresh Garden Salad<br>
+          Roasted Cauliflower<br>
+          Buffalo Roasted Cauliflower<br>
+          Marinara Dipping Sauce<br>
+          Texas Grapefruit &amp; Juicy Orange
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">
+    FUELING FUTURES • Menu subject to change
+  </div>
+</div>
+</body>
+</html>
