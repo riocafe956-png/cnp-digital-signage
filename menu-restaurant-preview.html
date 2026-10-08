@@ -101,26 +101,41 @@ function iconForItem(item){
 }
 
   function showLogoOnly() {
-  document.body.innerHTML = `
-    <div style="
+  let screen = document.getElementById('logoOnlyScreen');
+
+  if (!screen) {
+    screen = document.createElement('div');
+    screen.id = 'logoOnlyScreen';
+
+    screen.style.cssText = `
       position:fixed;
       inset:0;
+      z-index:9999;
       background:#071a33;
       display:flex;
       align-items:center;
       justify-content:center;
-    ">
-      <img
-        src="./food-images/cnp-logo.png"
-        alt="RGCGISD Child Nutrition Program"
-        style="
-          width:min(65vw,650px);
-          max-height:75vh;
-          object-fit:contain;
-        "
-      >
-    </div>
-  `;
+    `;
+
+    const logo = document.createElement('img');
+    logo.src = './food-images/cnp-logo.png';
+    logo.alt = 'RGCGISD Child Nutrition Program';
+    logo.style.cssText = `
+      width:min(65vw,650px);
+      max-height:75vh;
+      object-fit:contain;
+    `;
+
+    screen.appendChild(logo);
+    document.body.appendChild(screen);
+  }
+
+  screen.style.display = 'flex';
+}
+
+function hideLogoOnly() {
+  const screen = document.getElementById('logoOnlyScreen');
+  if (screen) screen.style.display = 'none';
 }
   
 async function loadLunchMenu(){
