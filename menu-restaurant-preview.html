@@ -130,10 +130,19 @@ async function loadLunchMenu(){
     const menu=await response.json();
     document.getElementById('campus').textContent=menu.campus||'GRULLA HIGH SCHOOL';
     document.getElementById('menuDate').textContent=menu.displayDate||'';
-    if(menu.date!==localToday()){showMessage("Today's menu has not been published yet.");return;}
-    if(menu.status!=='AVAILABLE'||!Array.isArray(menu.lunchItems)||menu.lunchItems.length===0){
-      showMessage(menu.status==='NO_CLASS'?'No Classes Today':'No lunch menu available today.');return;
-    }
+    if (menu.date !== localToday()) {
+  showLogoOnly();
+  return;
+}
+
+if (
+  menu.status !== 'AVAILABLE' ||
+  !Array.isArray(menu.lunchItems) ||
+  menu.lunchItems.length === 0
+) {
+  showLogoOnly();
+  return;
+}
     const items=menu.lunchItems.filter(Boolean);
     const entree=menu.featuredEntree||items.find(item=>/pizza|wings|chicken|burger|taco|tamale|pasta|spaghetti|beef|fish|sandwich|flauta|tenders/i.test(item))||items[0];
     document.getElementById('featured').textContent=entree;
