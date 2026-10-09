@@ -1,25 +1,9 @@
 {
   "campus": "Grulla High School",
-  "date": "2026-10-08",
-  "displayDate": "Thursday, October 8, 2026",
-  "status": "AVAILABLE",
+  "date": "2026-10-09",
+  "displayDate": "Friday, October 9, 2026",
+  "status": "NO_MENU",
   "title": "TODAY'S LUNCH MENU",
-  "lunchItems": [
-    "Fruitastic Yogurt Tray",
-    "Pizza & Wings",
-    "Fresh Garden Salad",
-    "Roasted Cauliflor",
-    "Buffalo Roasted Cauliflower",
-    "Marinara Dipping Sauce",
-    "Texas Fruit Grapefruit",
-    "Texas Fruit Juicy Orange"
-  ],
-  "duration": 30,
-  "featuredEntree": "Pizza & Wings",
-  "featuredPhoto": {
-    "fileId": "1r6PP7bxTe3qlsb16XOQvcfTvMggltjm2",
-    "name": "Pizza & Wings",
-    "url": "./food-images/pizza-and-wings-enhanced.png"
-  },
-  "fallbackImage": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/cnp-logo.png"
+  "lunchItems": [],
+  "duration": 30
 }
