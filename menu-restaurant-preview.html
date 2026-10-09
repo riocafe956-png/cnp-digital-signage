@@ -74,6 +74,7 @@ function showMessage(message){
   const container=document.getElementById('menuItems');container.replaceChildren();
   const item=document.createElement('div');item.className='status';item.textContent=message;container.appendChild(item);
   setFeaturedPhoto(null);
+  setMenuAvailability(false);
 }
 function setFeaturedPhoto(photo){
   const image=document.getElementById('foodPhoto');
@@ -146,7 +147,7 @@ async function loadLunchMenu(){
     document.getElementById('campus').textContent=menu.campus||'GRULLA HIGH SCHOOL';
     document.getElementById('menuDate').textContent=menu.displayDate||'';
     if (menu.date !== localToday()) {
-  showLogoOnly();
+  setMenuAvailability(false);
   return;
 }
 
@@ -155,12 +156,12 @@ if (
   !Array.isArray(menu.lunchItems) ||
   menu.lunchItems.length === 0
 ) {
-  showLogoOnly();
+  setMenuAvailability(false);
   return;
 }
 
     // Hide the logo screen when today's lunch menu is available.
-hideLogoOnly();
+setMenuAvailability(true);
     
     const items=menu.lunchItems.filter(Boolean);
     const entree=menu.featuredEntree||items.find(item=>/pizza|wings|chicken|burger|taco|tamale|pasta|spaghetti|beef|fish|sandwich|flauta|tenders/i.test(item))||items[0];
@@ -175,8 +176,92 @@ hideLogoOnly();
     setFeaturedPhoto(menu.featuredPhoto);
   }catch(error){showMessage('Unable to load today’s lunch menu.');console.error(error);}
 }
+// The playlist is produced by RGCGISD Apps Script and hosted on GitHub Pages.
+const SIGNAGE_CONFIG_URL = './signage-config.json';
+const SIGNAGE_CAMPUS = 'Grulla High School';
+const MENU_SECONDS = 25;
+const SIGNAGE_REFRESH_MS = 60000;
+let menuAvailable = false;
+let signageSlides = [];
+let currentSlot = -1;
+let rotationTimer = null;
+let playlistFingerprint = '';
+
+const signageLayer = document.createElement('div');
+signageLayer.id = 'scheduledFlyerScreen';
+signageLayer.setAttribute('aria-label', 'Scheduled Grulla High School flyer');
+signageLayer.style.cssText = 'position:fixed;inset:0;z-index:10001;background:#071a33;display:none;align-items:center;justify-content:center;overflow:hidden';
+const signageImage = document.createElement('img');
+signageImage.alt = 'Grulla High School scheduled announcement';
+signageImage.style.cssText = 'display:block;width:100%;height:100%;object-fit:contain';
+signageLayer.appendChild(signageImage);
+document.body.appendChild(signageLayer);
+
+function setMenuAvailability(available) {
+  menuAvailable = Boolean(available);
+  if (currentSlot === -1) rotateToNext();
+  else if (currentSlot === 0 && !menuAvailable) rotateToNext();
+  else if (currentSlot === 0) showMenuScreen();
+}
+function showMenuScreen() {
+  signageLayer.style.display = 'none';
+  if (menuAvailable) hideLogoOnly();
+  else showLogoOnly();
+}
+function rotateToNext() {
+  if (rotationTimer) clearTimeout(rotationTimer);
+  // Slot zero is the lunch menu; subsequent slots are scheduled flyers.
+  const slots = (menuAvailable ? [{kind:'menu'}] : []).concat(signageSlides.map(slide => ({kind:'flyer',slide})));
+  if (!slots.length) {
+    currentSlot = -1;
+    signageLayer.style.display = 'none';
+    showLogoOnly();
+    rotationTimer = setTimeout(rotateToNext, SIGNAGE_REFRESH_MS);
+    return;
+  }
+  currentSlot = (currentSlot + 1) % slots.length;
+  const slot = slots[currentSlot];
+  if (slot.kind === 'menu') {
+    showMenuScreen();
+    rotationTimer = setTimeout(rotateToNext, MENU_SECONDS * 1000);
+    return;
+  }
+  hideLogoOnly();
+  signageImage.onerror = () => {
+    console.warn('Unable to display scheduled flyer:', slot.slide.url);
+    rotationTimer = setTimeout(rotateToNext, 1000);
+  };
+  signageImage.onload = () => { signageLayer.style.display = 'flex'; };
+  signageLayer.style.display = 'flex';
+  signageImage.src = slot.slide.url;
+  const duration = Math.min(120, Math.max(5, Number(slot.slide.duration) || 15));
+  rotationTimer = setTimeout(rotateToNext, duration * 1000);
+}
+async function refreshSignagePlaylist() {
+  try {
+    const response = await fetch(SIGNAGE_CONFIG_URL + '?t=' + Date.now(), {cache:'no-store'});
+    if (!response.ok) throw new Error('Signage configuration unavailable');
+    const config = await response.json();
+    const campuses = config.campuses || {};
+    const campusKey = Object.keys(campuses).find(key => key.trim().toLowerCase() === SIGNAGE_CAMPUS.toLowerCase());
+    const rawSlides = campusKey && Array.isArray(campuses[campusKey].slides) ? campuses[campusKey].slides : [];
+    const nextSlides = rawSlides.filter(slide => typeof slide.url === 'string' && /^https?:\/\//i.test(slide.url));
+    const fingerprint = JSON.stringify(nextSlides);
+    if (fingerprint !== playlistFingerprint) {
+      playlistFingerprint = fingerprint;
+      signageSlides = nextSlides;
+      // Restart immediately so newly scheduled or expired flyers take effect.
+      currentSlot = -1;
+      rotateToNext();
+    }
+  } catch(error) { console.warn('Could not refresh scheduled flyers:', error); }
+}
+// Show the logo while both data sources load, then begin automatic rotation.
+showLogoOnly();
 loadLunchMenu();
-setInterval(loadLunchMenu,60000);
+refreshSignagePlaylist();
+setInterval(loadLunchMenu, 60000);
+setInterval(refreshSignagePlaylist, SIGNAGE_REFRESH_MS);
 </script>
 </body>
 </html>
