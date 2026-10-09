@@ -8,6 +8,9 @@
 :root{--navy:#071b35;--navy2:#123b62;--gold:#f3c75c;--cream:#fffaf0;--ink:#0d2b4c}
 *{box-sizing:border-box}
 html,body{margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif;background:var(--navy);color:white}
+  html, body, * {
+  cursor: none !important;
+}
 .screen{min-height:100vh;padding:clamp(16px,2vw,36px);display:flex;flex-direction:column;gap:clamp(12px,1.5vw,25px);background:radial-gradient(ellipse at 92% 2%,rgba(62,128,176,.38),transparent 42%),radial-gradient(ellipse at 0 95%,rgba(232,175,59,.13),transparent 37%),linear-gradient(135deg,#06172c,#12375c)}
 .header{display:flex;align-items:center;justify-content:space-between;gap:24px}
 .brand-group{display:flex;align-items:center;gap:clamp(14px,1.6vw,26px);min-width:0}
