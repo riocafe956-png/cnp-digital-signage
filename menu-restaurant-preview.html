@@ -111,10 +111,55 @@ const FOOD_IMAGE_RULES = [
   [/pizza/i, 'pizza.png']
 ];
 
+// Normalization makes capitalization, accents, punctuation and spacing irrelevant.
+const FOOD_ALIASES = {
+  'chix':'chicken','chkn':'chicken','chik':'chicken','chiken':'chicken',
+  'chikn':'chicken','chckn':'chicken','chk':'chicken',
+  'spagetti':'spaghetti','spagheti':'spaghetti','spagettii':'spaghetti',
+  'ornge':'orange','oragne':'orange','bonless':'boneless',
+  'burguer':'burger','cheese burger':'cheeseburger',
+  'tender':'tenders','strip':'tenders','strips':'tenders','fingers':'tenders',
+  'parm':'parmesan','posole':'pozole','carnitas':'carnita',
+  'meatballs':'meat','flauta':'flautas'
+};
+function normalizeFood(value){
+  let s=String(value||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/&/g,' and ').replace(/[^a-z0-9]+/g,' ').trim().replace(/\s+/g,' ');
+  // Longer aliases (including phrases) first.
+  Object.keys(FOOD_ALIASES).sort((a,b)=>b.length-a.length).forEach(key=>{
+    s=s.replace(new RegExp('\\b'+key+'\\b','g'),FOOD_ALIASES[key]);
+  });
+  return s;
+}
+function editDistance(a,b){
+  let prev=Array.from({length:b.length+1},(_,i)=>i);
+  for(let i=1;i<=a.length;i++){
+    const next=[i];
+    for(let j=1;j<=b.length;j++) next[j]=Math.min(next[j-1]+1,prev[j]+1,prev[j-1]+(a[i-1]===b[j-1]?0:1));
+    prev=next;
+  }
+  return prev[b.length];
+}
+// Exact / alias / phrase matches take priority. Fuzzy matching only accepts
+// clear, unique matches to avoid mixing up visually similar meals.
 function imageForEntree(entree) {
-  const name = String(entree || '');
-  const rule = FOOD_IMAGE_RULES.find(([pattern]) => pattern.test(name));
-  return rule ? './food-images/' + encodeURIComponent(rule[1]) : null;
+  const name=normalizeFood(entree);
+  if(!name) return null;
+  const rule=FOOD_IMAGE_RULES.find(([pattern])=>pattern.test(name));
+  if(rule) return './food-images/'+encodeURIComponent(rule[1]);
+  const candidates=FOOD_IMAGE_RULES.map(([,filename])=>({
+    filename, normalized:normalizeFood(filename.replace(/\.png$/i,'').replace(/-enhanced$/i,''))
+  })).filter(c=>c.normalized && !c.filename.includes('pizza-and-wings'));
+  // Single-word dishes require a near-perfect match; multiword dishes can
+  // tolerate a couple of typos but must have a clearly winning candidate.
+  const matches=candidates.map(c=>({
+    ...c, distance:editDistance(name,c.normalized)
+  })).sort((a,b)=>a.distance-b.distance);
+  if(!matches.length) return null;
+  const best=matches[0], second=matches[1];
+  const threshold=name.includes(' ')?Math.min(3,Math.floor(name.length*0.20)):1;
+  if(best.distance>threshold || (second && second.distance-best.distance<2)) return null;
+  return './food-images/'+encodeURIComponent(best.filename);
 }
 
 function setFeaturedPhoto(photo, entree){
