@@ -79,21 +79,60 @@ function showMessage(message){
   setFeaturedPhoto(null);
   setMenuAvailability(false);
 }
-function setFeaturedPhoto(photo){
+// Match the daily featured entrée to photos already uploaded to GitHub.
+// Specific matches come first so similar meals do not get mixed up.
+const FOOD_IMAGE_RULES = [
+  [/pizza\s*(?:&|and|\+)\s*(?:wings|chicken wings)|(?:wings|chicken wings)\s*(?:&|and|\+)\s*pizza/i, 'pizza-and-wings-enhanced.png'],
+  [/boneless\s*(?:chicken\s*)?wings?/i, 'Boneless wings.png'],
+  [/grilled\s*chicken\s*(?:burger|sandwich)/i, 'Grilled Chicken Burger.png'],
+  [/crispy\s*(?:chicken|chix)\s*(?:slider|sandwich)/i, 'Crispy Chix slider.png'],
+  [/chicken\s*(?:burger|sandwich)/i, 'Chicken Burger.png'],
+  [/chicken\s*(?:parmesan|parm)/i, 'Chicken Parmesan.png'],
+  [/chicken\s*(?:lo\s*mein|w\s*lo\s*mein)|lo\s*mein/i, 'Chicken w LoMein.png'],
+  [/orange\s*chicken/i, 'Orange Chicken.png'],
+  [/chicken\s*fajitas?|fajita\s*chicken/i, 'Chicken Fajita.png'],
+  [/(?:chicken|chix)\s*flautas?|flautas?/i, 'Chix Flautas.png'],
+  [/chicken\s*(?:nuggets?|poppers?)/i, 'Chicken Nuggets.png'],
+  [/chicken\s*(?:tenders?|strips?|fingers?)/i, 'Chicken tenders.png'],
+  [/spaghetti|meat\s*sauce/i, 'Spaghetti & Meat Sauce.png'],
+  [/million\s*dollar/i, 'Million Dollar.png'],
+  [/carnitas?\s*guisad[ao]|guisad[ao]/i, 'Carnita Guisada.png'],
+  [/pulled\s*pork/i, 'Pulled Pork.png'],
+  [/chili\s*(?:cheese\s*)?fries/i, 'Chili Fries.png'],
+  [/mini\s*corn\s*dogs?|corn\s*dogs?/i, 'Mini Corn Dogs.png'],
+  [/cheeseburgers?/i, 'Cheeseburger.png'],
+  [/hamburgers?|beef\s*burgers?/i, 'Hamburger.png'],
+  [/lasagn[ae]/i, 'Lasagna.png'],
+  [/enchiladas?/i, 'Enchiladas.png'],
+  [/pozole|posole/i, 'Pozole.png'],
+  [/pinwheels?/i, 'Pinwheel.png'],
+  [/burritos?/i, 'Burrito.png'],
+  [/wings?/i, 'Wings.png'],
+  [/pizza/i, 'pizza.png']
+];
+
+function imageForEntree(entree) {
+  const name = String(entree || '');
+  const rule = FOOD_IMAGE_RULES.find(([pattern]) => pattern.test(name));
+  return rule ? './food-images/' + encodeURIComponent(rule[1]) : null;
+}
+
+function setFeaturedPhoto(photo, entree){
   const image=document.getElementById('foodPhoto');
   const frame=document.getElementById('photoFrame');
-  const isPizzaWings =
-  /pizza\s*&\s*wings/i.test(
-    document.getElementById('featured').textContent
-  );
-
-const url = photo && isPizzaWings
-  ? './food-images/pizza-and-wings-enhanced.png'
-  : photo?.url || (photo ? FEATURED_PHOTO_URL : FALLBACK_URL);
-  frame.classList.toggle('is-fallback',!photo);
-  image.onerror=function(){image.onerror=null;frame.classList.add('is-fallback');image.src=FALLBACK_URL;};
+  // Menu name determines the picture; use the existing publisher photo
+  // when no name matches, then fall back to the CNP logo if it fails.
+  const matchedImage=imageForEntree(entree);
+  const url=matchedImage || (photo && (photo.url || FEATURED_PHOTO_URL)) || FALLBACK_URL;
+  frame.classList.toggle('is-fallback',url===FALLBACK_URL);
+  image.onerror=function(){
+    image.onerror=null;
+    frame.classList.add('is-fallback');
+    image.src=FALLBACK_URL;
+  };
   image.src=url+(url.includes('?')?'&':'?')+'t='+Date.now();
 }
+
 function iconForItem(item){
   const name=String(item).toLowerCase();
   if(/yogurt|milk|cheese/.test(name))return '🥛';
@@ -176,7 +215,7 @@ setMenuAvailability(true);
       const label=document.createElement('span');label.className='item-text';label.textContent=item;
       element.append(symbol,label);container.appendChild(element);
     });
-    setFeaturedPhoto(menu.featuredPhoto);
+    setFeaturedPhoto(menu.featuredPhoto, entree);
   }catch(error){showMessage('Unable to load today’s lunch menu.');console.error(error);}
 }
 // The playlist is produced by RGCGISD Apps Script and hosted on GitHub Pages.
