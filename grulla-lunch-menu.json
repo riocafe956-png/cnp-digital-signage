@@ -1,9 +1,21 @@
 {
   "campus": "Grulla High School",
-  "date": "2026-10-12",
-  "displayDate": "Monday, October 12, 2026",
-  "status": "NO_MENU",
+  "date": "2026-10-13",
+  "displayDate": "Tuesday, October 13, 2026",
+  "status": "AVAILABLE",
   "title": "TODAY'S LUNCH MENU",
-  "lunchItems": [],
-  "duration": 30
+  "lunchItems": [
+    "Fruitastic Yogurt Tray",
+    "Hot Diggity Dog",
+    "Cheese Sauce",
+    "Crispy Potato Rounds",
+    "Spicy Cucumber",
+    "Raw Veggie Mix",
+    "Fruit Cantaloupe",
+    "Fruit:Grapes"
+  ],
+  "duration": 30,
+  "featuredEntree": "Fruitastic Yogurt Tray",
+  "featuredPhoto": null,
+  "fallbackImage": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/cnp-logo.png"
 }
