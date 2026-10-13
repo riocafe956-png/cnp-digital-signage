@@ -5,16 +5,140 @@
   "refreshSeconds": 60,
   "campuses": {
     "Alto Bonito Elementary": {
-      "slides": []
+      "slides": [
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771256274470322/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1770004334595516/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-02.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-02.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-03.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-03.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-04.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-04.png",
+          "duration": 15
+        }
+      ]
     },
     "Barrera Elementary": {
-      "slides": []
+      "slides": [
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771256274470322/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1770004334595516/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-02.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-02.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-03.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-03.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-04.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-04.png",
+          "duration": 15
+        }
+      ]
     },
     "CNP Office Staff": {
-      "slides": []
+      "slides": [
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771256274470322/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1770004334595516/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-02.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-02.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-03.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-03.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-04.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-04.png",
+          "duration": 15
+        }
+      ]
     },
     "Grulla Elementary": {
-      "slides": []
+      "slides": [
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771256274470322/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1770004334595516/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-02.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-02.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-03.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-03.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-04.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-04.png",
+          "duration": 15
+        }
+      ]
     },
     "Grulla High School": {
       "slides": [
@@ -32,38 +156,378 @@
           "name": "Halloween Fueling Futures Nutrition Poster.png",
           "url": "https://riocafe956-png.github.io/cnp-digital-signage/signage-images/1kbQK6EQSY3OcNyrLoWjwsPmhe-v23Oub.png",
           "duration": 10
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771256274470322/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1770004334595516/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-02.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-02.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-03.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-03.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-04.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-04.png",
+          "duration": 15
         }
       ]
     },
     "Grulla Middle School": {
-      "slides": []
+      "slides": [
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771256274470322/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1770004334595516/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-02.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-02.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-03.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-03.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-04.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-04.png",
+          "duration": 15
+        }
+      ]
     },
     "J&O Elementary": {
-      "slides": []
+      "slides": [
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771256274470322/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1770004334595516/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-02.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-02.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-03.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-03.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-04.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-04.png",
+          "duration": 15
+        }
+      ]
     },
     "La Union Elementary": {
-      "slides": []
+      "slides": [
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771256274470322/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1770004334595516/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-02.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-02.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-03.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-03.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-04.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-04.png",
+          "duration": 15
+        }
+      ]
     },
     "Ramirez Elementary": {
-      "slides": []
+      "slides": [
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771256274470322/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1770004334595516/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-02.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-02.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-03.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-03.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-04.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-04.png",
+          "duration": 15
+        }
+      ]
     },
     "Ringgold Elementary": {
-      "slides": []
+      "slides": [
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771256274470322/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1770004334595516/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-02.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-02.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-03.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-03.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-04.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-04.png",
+          "duration": 15
+        }
+      ]
     },
     "Ringgold Middle School": {
-      "slides": []
+      "slides": [
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771256274470322/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1770004334595516/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-02.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-02.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-03.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-03.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-04.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-04.png",
+          "duration": 15
+        }
+      ]
     },
     "Rio Grande City High School": {
-      "slides": []
+      "slides": [
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771256274470322/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1770004334595516/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-02.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-02.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-03.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-03.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-04.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-04.png",
+          "duration": 15
+        }
+      ]
     },
     "Roque Guerra Elementary": {
-      "slides": []
+      "slides": [
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771256274470322/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1770004334595516/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-02.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-02.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-03.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-03.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-04.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-04.png",
+          "duration": 15
+        }
+      ]
     },
     "Sanchez Elementary": {
-      "slides": []
+      "slides": [
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771256274470322/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1770004334595516/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-02.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-02.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-03.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-03.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-04.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-04.png",
+          "duration": 15
+        }
+      ]
     },
     "Veterans Middle School": {
-      "slides": []
+      "slides": [
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771256274470322/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1770004334595516/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-01.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-01.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-02.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-02.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-03.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-03.png",
+          "duration": 15
+        },
+        {
+          "name": "RGCG Meals Rock - slide-04.png",
+          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1771804761082140/slide-04.png",
+          "duration": 15
+        }
+      ]
     }
   }
 }
