@@ -263,6 +263,7 @@ function hideLogoOnly() {
   
 async function loadLunchMenu(){
   try{
+    await loadGitHubFoodImages();
     const response=await fetch(MENU_URL+'?t='+Date.now(),{cache:'no-store'});
     if(!response.ok)throw new Error('Menu file unavailable');
     const menu=await response.json();
