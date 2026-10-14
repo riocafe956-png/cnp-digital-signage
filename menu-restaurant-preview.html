@@ -177,25 +177,68 @@ function editDistance(a,b){
 }
 // Exact / alias / phrase matches take priority. Fuzzy matching only accepts
 // clear, unique matches to avoid mixing up visually similar meals.
+
 function imageForEntree(entree) {
-  const name=normalizeFood(entree);
-  if(!name) return null;
-  const rule=FOOD_IMAGE_RULES.find(([pattern])=>pattern.test(name));
-  if(rule) return './food-images/'+encodeURIComponent(rule[1]);
-  const candidates=FOOD_IMAGE_RULES.map(([,filename])=>({
-    filename, normalized:normalizeFood(filename.replace(/\.png$/i,'').replace(/-enhanced$/i,''))
-  })).filter(c=>c.normalized && !c.filename.includes('pizza-and-wings'));
-  // Single-word dishes require a near-perfect match; multiword dishes can
-  // tolerate a couple of typos but must have a clearly winning candidate.
-  const matches=candidates.map(c=>({
-    ...c, distance:editDistance(name,c.normalized)
-  })).sort((a,b)=>a.distance-b.distance);
-  if(!matches.length) return null;
-  const best=matches[0], second=matches[1];
-  const threshold=name.includes(' ')?Math.min(3,Math.floor(name.length*0.20)):1;
-  if(best.distance>threshold || (second && second.distance-best.distance<2)) return null;
-  return './food-images/'+encodeURIComponent(best.filename);
+  const name = normalizeFood(entree);
+  if (!name) return null;
+
+  const photoURL = filename =>
+    './food-images/' + encodeURIComponent(filename);
+
+  // Preserve the special Pizza & Wings photograph.
+  const special = FOOD_IMAGE_RULES.find(([pattern, filename]) =>
+    filename === 'pizza-and-wings-enhanced.png' &&
+    pattern.test(name)
+  );
+
+  if (special) return photoURL(special[1]);
+
+  // First, look for an exact match among all GitHub pictures.
+  const photos = GITHUB_FOOD_IMAGES.map(filename => ({
+    filename,
+    normalized: normalizeFood(
+      filename.replace(/\.(png|jpe?g|webp)$/i, '')
+    )
+  }));
+
+  const exact = photos.find(photo =>
+    photo.normalized === name
+  );
+
+  if (exact) return photoURL(exact.filename);
+
+  // Keep existing special rules and alternative food names.
+  const rule = FOOD_IMAGE_RULES.find(([pattern]) =>
+    pattern.test(name)
+  );
+
+  if (rule) return photoURL(rule[1]);
+
+  // Try a close filename match for minor spelling differences.
+  const matches = photos.map(photo => ({
+    ...photo,
+    distance: editDistance(name, photo.normalized)
+  })).sort((a, b) => a.distance - b.distance);
+
+  if (!matches.length) return null;
+
+  const best = matches[0];
+  const second = matches[1];
+
+  const threshold = name.includes(' ')
+    ? Math.min(3, Math.floor(name.length * 0.20))
+    : 1;
+
+  if (
+    best.distance > threshold ||
+    (second && second.distance - best.distance < 2)
+  ) {
+    return null;
+  }
+
+  return photoURL(best.filename);
 }
+
 
 function setFeaturedPhoto(photo, entree){
   const image=document.getElementById('foodPhoto');
