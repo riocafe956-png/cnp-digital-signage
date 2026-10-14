@@ -1,42 +1,33 @@
-
-{
-  "version": 1,
-  "defaultImage": "food-images/default.jpg",
-  "foods": [
-    {
-      "name": "Pizza & Wings",
-      "keywords": ["pizza", "wings"],
-      "image": "food-images/pizza-wings.jpg"
-    },
-    {
-      "name": "Tacos",
-      "keywords": ["taco"],
-      "image": "food-images/tacos.jpg"
-    },
-    {
-      "name": "Hamburgers",
-      "keywords": ["hamburger", "cheeseburger", "burger"],
-      "image": "food-images/hamburgers.jpg"
-    },
-    {
-      "name": "Chicken Sandwich",
-      "keywords": ["chicken sandwich"],
-      "image": "food-images/chicken-sandwich.jpg"
-    },
-    {
-      "name": "Chicken Nuggets",
-      "keywords": ["chicken nuggets", "nuggets"],
-      "image": "food-images/chicken-nuggets.jpg"
-    },
-    {
-      "name": "Spaghetti",
-      "keywords": ["spaghetti"],
-      "image": "food-images/spaghetti.jpg"
-    },
-    {
-      "name": "Tamales",
-      "keywords": ["tamales", "tamale"],
-      "image": "food-images/tamales.jpg"
-    }
-  ]
-}
+[
+  "Boneless wings.png",
+  "Burrito.png",
+  "Carnita Guisada.png",
+  "Cheeseburger.png",
+  "Chicken Burger.png",
+  "Chicken Fajita.png",
+  "Chicken Nuggets.png",
+  "Chicken Parmesan.png",
+  "Chicken tenders.png",
+  "Chicken w LoMein.png",
+  "Chili Fries.png",
+  "Chix Flautas.png",
+  "Crispy Chix slider.png",
+  "Enchiladas.png",
+  "Fruit & Yogurt Tray.png",
+  "Fruitastic Yogurt Tray.png",
+  "Grilled Chicken Burger.png",
+  "Hamburger.png",
+  "Lasagna.png",
+  "Million Dollar.png",
+  "Mini Corn Dogs.png",
+  "Orange Chicken.png",
+  "Pinwheel.png",
+  "Pozole.png",
+  "Pulled Pork.png",
+  "Spaghetti & Meat Sauce.png",
+  "Wings.png",
+  "cnp-logo.png",
+  "grulla-featured.jpg",
+  "pizza-and-wings-enhanced.png",
+  "pizza.png"
+]
