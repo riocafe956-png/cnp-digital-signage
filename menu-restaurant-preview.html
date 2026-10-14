@@ -67,6 +67,40 @@ const FALLBACK_URL = './food-images/cnp-logo.png';
 // Current photo publisher creates this file. A later step will make
 // the publisher provide a URL for any supported image extension.
 const FEATURED_PHOTO_URL = './food-images/grulla-featured.jpg';
+  
+let GITHUB_FOOD_IMAGES = [];
+
+async function loadGitHubFoodImages() {
+  try {
+    const response = await fetch(
+      './food-images.json?t=' + Date.now(),
+      { cache: 'no-store' }
+    );
+
+    if (!response.ok) {
+      throw new Error('HTTP ' + response.status);
+    }
+
+    const images = await response.json();
+
+    if (!Array.isArray(images)) {
+      throw new Error('Invalid food image list');
+    }
+
+    GITHUB_FOOD_IMAGES = images.filter(function(name) {
+      return typeof name === 'string' &&
+        /\.(png|jpe?g|webp)$/i.test(name);
+    });
+
+    console.log(
+      'Automatic food pictures loaded:',
+      GITHUB_FOOD_IMAGES.length
+    );
+  } catch (error) {
+    console.warn('Food image list unavailable:', error);
+  }
+}
+
 function localToday(){
   const parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
   const get=type=>parts.find(p=>p.type===type).value;
