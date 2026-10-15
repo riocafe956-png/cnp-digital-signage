@@ -1,27 +1,20 @@
 {
   "campus": "Grulla High School",
-  "date": "2026-10-14",
-  "displayDate": "Wednesday, October 14, 2026",
+  "date": "2026-10-15",
+  "displayDate": "Thursday, October 15, 2026",
   "status": "AVAILABLE",
   "title": "TODAY'S LUNCH MENU",
   "lunchItems": [
-    "Chicken Salad & Chef Salad",
-    "Tostitos Nachos",
-    "Cheese Sauce",
-    "Charro Beans",
-    "Farm",
-    "Fresh Lettuce & Tomato Salad",
-    "Spanish Rice",
-    "carrot Snackers",
-    "Fruit:Strawberry",
-    "Fruit: Grapes"
+    "Fruitastic Yogurt Tray",
+    "Cheese burger",
+    "Hamburger",
+    "Fresh Burger Salad",
+    "Roasted Red Potatoes",
+    "Texas FruitWatermelon",
+    "Fruit:Cantaloupe"
   ],
   "duration": 30,
-  "featuredEntree": "Chicken Salad & Chef Salad",
-  "featuredPhoto": {
-    "fileId": "1GEyJ7uueBg_FdSsBgi24ysc0EQyDlJfN",
-    "name": "Chicken & Grape Chef Salad.png",
-    "url": "./food-images/grulla-featured.jpg"
-  },
+  "featuredEntree": "Cheese burger",
+  "featuredPhoto": null,
   "fallbackImage": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/cnp-logo.png"
 }
