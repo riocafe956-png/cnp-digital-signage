@@ -1,22 +1,22 @@
 {
   "campus": "Grulla High School",
-  "date": "2026-10-15",
-  "displayDate": "Thursday, October 15, 2026",
+  "date": "2026-10-16",
+  "displayDate": "Friday, October 16, 2026",
   "status": "AVAILABLE",
   "title": "TODAY'S LUNCH MENU",
   "lunchItems": [
-    "Fruitastic Yogurt Tray",
-    "Cheese burger",
-    "Hamburger",
-    "Fresh Burger Salad",
-    "Roasted Red Potatoes",
-    "Fruit : Strawberries",
-    "Fruit :Grapes",
-    "Texas Fruit Watermelon",
-    "Fruit:Cantaloupe"
+    "NATIONAL PASTA DAY",
+    "Chicken Alfredo",
+    "Texas Toast Garlic",
+    "Pepperoni Pizza",
+    "Normandy Blend",
+    "Italian Greek Salad",
+    "Carrot Coins",
+    "Texas Grapefruit",
+    "Texas Juicy Orange"
   ],
   "duration": 30,
-  "featuredEntree": "Cheese burger",
+  "featuredEntree": "NATIONAL PASTA DAY",
   "featuredPhoto": null,
   "fallbackImage": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/cnp-logo.png"
 }
