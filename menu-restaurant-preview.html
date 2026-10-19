@@ -330,7 +330,11 @@ if (
 setMenuAvailability(true);
     
     const items=menu.lunchItems.filter(Boolean);
-    const entree=menu.featuredEntree||items.find(item=>/pizza|wings|chicken|burger|taco|tamale|pasta|spaghetti|beef|fish|sandwich|flauta|tenders/i.test(item))||items[0];
+    const entree =
+  (menu.campus === 'Grulla High School' ? items[1] : null) ||
+  menu.featuredEntree ||
+  items.find(item => /pizza|wings|chicken|burger|taco|tamale|pasta|spaghetti|beef|fish|sandwich|flauta|tenders/i.test(item)) ||
+  items[0];
     document.getElementById('featured').textContent=entree;
     const container=document.getElementById('menuItems');container.replaceChildren();
     items.filter(item=>item!==entree).forEach(function(item){
