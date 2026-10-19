@@ -1,9 +1,19 @@
 {
   "campus": "Grulla High School",
-  "date": "2026-10-18",
-  "displayDate": "Sunday, October 18, 2026",
-  "status": "WEEKEND",
+  "date": "2026-10-19",
+  "displayDate": "Monday, October 19, 2026",
+  "status": "AVAILABLE",
   "title": "TODAY'S LUNCH MENU",
-  "lunchItems": [],
-  "duration": 30
+  "lunchItems": [
+    "Chicken Nuggets & Chef Salad",
+    "Mini Corn Dogs",
+    "Broccoli Soup",
+    "Baby Carrot Snackers",
+    "Fresh Grapes",
+    "Fresh Juicy Orange"
+  ],
+  "duration": 30,
+  "featuredEntree": "Chicken Nuggets & Chef Salad",
+  "featuredPhoto": null,
+  "fallbackImage": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/cnp-logo.png"
 }
