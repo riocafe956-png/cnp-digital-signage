@@ -5,7 +5,7 @@
   "status": "AVAILABLE",
   "title": "TODAY'S LUNCH MENU",
   "lunchItems": [
-    "Chicken Chipotle & Chef Salad",
+    "Chicken Salad & Chef Salad",
     "Beef Flautas",
     "Garbanzo Bean Soup",
     "Coditos",
@@ -15,8 +15,12 @@
     "Craisin Crunch Pack",
     "Milk Asst."
   ],
-  "featuredEntree": "Chicken Chipotle & Chef Salad",
+  "featuredEntree": "Chicken Salad & Chef Salad",
   "duration": 30,
-  "featuredPhoto": null,
+  "featuredPhoto": {
+    "fileId": "1GEyJ7uueBg_FdSsBgi24ysc0EQyDlJfN",
+    "name": "Chicken & Grape Chef Salad.png",
+    "url": "./food-images/grulla-featured.jpg"
+  },
   "fallbackImage": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/cnp-logo.png"
 }
