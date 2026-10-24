@@ -1,22 +1,9 @@
 {
   "campus": "Grulla High School",
-  "date": "2026-10-23",
-  "displayDate": "Friday, October 23, 2026",
-  "status": "AVAILABLE",
+  "date": "2026-10-24",
+  "displayDate": "Saturday, October 24, 2026",
+  "status": "WEEKEND",
   "title": "TODAY'S LUNCH MENU",
-  "lunchItems": [
-    "Crispy Chicken Sliders",
-    "Lasagna",
-    "Texas Toast Garlic",
-    "Fresh Garden Salad",
-    "Baby Carrots",
-    "Baby Carrots Snackers",
-    "Fruit: Strawberries",
-    "Craisin Crunch Pack",
-    "Milk Asst."
-  ],
-  "featuredEntree": "Crispy Chicken Sliders",
-  "duration": 30,
-  "featuredPhoto": null,
-  "fallbackImage": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/cnp-logo.png"
+  "lunchItems": [],
+  "duration": 30
 }
