@@ -2,8 +2,23 @@
   "campus": "Grulla High School",
   "date": "2026-10-26",
   "displayDate": "Monday, October 26, 2026",
-  "status": "NO_MENU",
+  "status": "AVAILABLE",
   "title": "TODAY'S LUNCH MENU",
-  "lunchItems": [],
-  "duration": 30
+  "lunchItems": [
+    "Chicken Tender & Chef Salad",
+    "Country Steak",
+    "White Gravy",
+    "Popcorn Chicken",
+    "Oat Roll 2 oz.",
+    "Roasted Carrot Sticks",
+    "Cheesy Broccoli",
+    "Fruit Grapes",
+    "Fruit Cantaloupe",
+    "Craisin Crunch Pack",
+    "Milk Asst."
+  ],
+  "featuredEntree": "Chicken Tender & Chef Salad",
+  "duration": 30,
+  "featuredPhoto": null,
+  "fallbackImage": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/cnp-logo.png"
 }
