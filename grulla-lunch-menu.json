@@ -19,9 +19,6 @@
   ],
   "featuredEntree": "Country Steak",
   "duration": 30,
-  "featuredPhoto": {
-    "name": "Country steak.png",
-    "url": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/Country%20steak.png"
-  },
+  "featuredPhoto": null,
   "fallbackImage": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/cnp-logo.png"
 }
