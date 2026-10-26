@@ -17,8 +17,12 @@
     "Craisin Crunch Pack",
     "Milk Asst."
   ],
-  "featuredEntree": "Chicken Tender & Chef Salad",
+  "featuredEntree": "Country Steak",
   "duration": 30,
-  "featuredPhoto": null,
+  "featuredPhoto": {
+    "fileId": "1g20QnsNPsug8Syb44BW_2_BDHPLrJ_D8",
+    "name": "Country steak.jpg",
+    "url": "./food-images/country steak.png"
+  },
   "fallbackImage": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/cnp-logo.png"
 }
