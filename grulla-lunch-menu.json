@@ -1,27 +1,23 @@
 {
   "campus": "Grulla High School",
-  "date": "2026-10-26",
-  "displayDate": "Monday, October 26, 2026",
+  "date": "2026-10-27",
+  "displayDate": "Tuesday, October 27, 2026",
   "status": "AVAILABLE",
   "title": "TODAY'S LUNCH MENU",
   "lunchItems": [
-    "Chicken Tender & Chef Salad",
-    "Country Steak",
-    "White Gravy",
-    "Popcorn Chicken",
-    "Oat Roll 2 oz.",
-    "Roasted Carrot Sticks",
-    "Cheesy Broccoli",
-    "Fruit Grapes",
-    "Fruit Cantaloupe",
+    "Fruitastic Yogurt Tray",
+    "Lonestar Loaded Mac & Cheese",
+    "Chili Dog",
+    "Cheese Sauce",
+    "Potato Salad",
+    "Creamy Corn",
+    "Fruit Watermelon",
+    "Fruit Juicy Orange",
     "Craisin Crunch Pack",
-    "Milk Asst."
+    "Milk Asst"
   ],
-  "featuredEntree": "Country Steak",
+  "featuredEntree": "Lonestar Loaded Mac & Cheese",
   "duration": 30,
-  "featuredPhoto": {
-    "name": "Country steak.png",
-    "url": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/Country%20steak.png"
-  },
+  "featuredPhoto": null,
   "fallbackImage": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/cnp-logo.png"
 }
