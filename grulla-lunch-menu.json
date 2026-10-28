@@ -6,6 +6,7 @@
   "title": "TODAY'S LUNCH MENU",
   "lunchItems": [
     "Chicken Salad & Chef Salad",
+    "Bean & Cheese Burrito",
     "Tostitos Nachos",
     "Pork Pozole w/ Corn Tortilla",
     "Cheese Sauce",
@@ -18,7 +19,7 @@
     "Craisin Crunch Pack",
     "Milk Asst."
   ],
-  "featuredEntree": "Tostitos Nachos",
+  "featuredEntree": "Bean & Cheese Burrito",
   "duration": 30,
   "featuredPhoto": null,
   "fallbackImage": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/cnp-logo.png"
