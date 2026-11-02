@@ -5,139 +5,49 @@
   "refreshSeconds": 60,
   "campuses": {
     "Alto Bonito Elementary": {
-      "slides": [
-        {
-          "name": "RGCG Meals Rock - slide-01.png",
-          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1789554052640544/slide-01.png",
-          "duration": 15
-        }
-      ]
+      "slides": []
     },
     "Barrera Elementary": {
-      "slides": [
-        {
-          "name": "RGCG Meals Rock - slide-01.png",
-          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1789554052640544/slide-01.png",
-          "duration": 15
-        }
-      ]
+      "slides": []
     },
     "CNP Office Staff": {
-      "slides": [
-        {
-          "name": "RGCG Meals Rock - slide-01.png",
-          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1789554052640544/slide-01.png",
-          "duration": 15
-        }
-      ]
+      "slides": []
     },
     "Grulla Elementary": {
-      "slides": [
-        {
-          "name": "RGCG Meals Rock - slide-01.png",
-          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1789554052640544/slide-01.png",
-          "duration": 15
-        }
-      ]
+      "slides": []
     },
     "Grulla High School": {
-      "slides": [
-        {
-          "name": "RGCG Meals Rock - slide-01.png",
-          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1789554052640544/slide-01.png",
-          "duration": 15
-        }
-      ]
+      "slides": []
     },
     "Grulla Middle School": {
-      "slides": [
-        {
-          "name": "RGCG Meals Rock - slide-01.png",
-          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1789554052640544/slide-01.png",
-          "duration": 15
-        }
-      ]
+      "slides": []
     },
     "J&O Elementary": {
-      "slides": [
-        {
-          "name": "RGCG Meals Rock - slide-01.png",
-          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1789554052640544/slide-01.png",
-          "duration": 15
-        }
-      ]
+      "slides": []
     },
     "La Union Elementary": {
-      "slides": [
-        {
-          "name": "RGCG Meals Rock - slide-01.png",
-          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1789554052640544/slide-01.png",
-          "duration": 15
-        }
-      ]
+      "slides": []
     },
     "Ramirez Elementary": {
-      "slides": [
-        {
-          "name": "RGCG Meals Rock - slide-01.png",
-          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1789554052640544/slide-01.png",
-          "duration": 15
-        }
-      ]
+      "slides": []
     },
     "Ringgold Elementary": {
-      "slides": [
-        {
-          "name": "RGCG Meals Rock - slide-01.png",
-          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1789554052640544/slide-01.png",
-          "duration": 15
-        }
-      ]
+      "slides": []
     },
     "Ringgold Middle School": {
-      "slides": [
-        {
-          "name": "RGCG Meals Rock - slide-01.png",
-          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1789554052640544/slide-01.png",
-          "duration": 15
-        }
-      ]
+      "slides": []
     },
     "Rio Grande City High School": {
-      "slides": [
-        {
-          "name": "RGCG Meals Rock - slide-01.png",
-          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1789554052640544/slide-01.png",
-          "duration": 15
-        }
-      ]
+      "slides": []
     },
     "Roque Guerra Elementary": {
-      "slides": [
-        {
-          "name": "RGCG Meals Rock - slide-01.png",
-          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1789554052640544/slide-01.png",
-          "duration": 15
-        }
-      ]
+      "slides": []
     },
     "Sanchez Elementary": {
-      "slides": [
-        {
-          "name": "RGCG Meals Rock - slide-01.png",
-          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1789554052640544/slide-01.png",
-          "duration": 15
-        }
-      ]
+      "slides": []
     },
     "Veterans Middle School": {
-      "slides": [
-        {
-          "name": "RGCG Meals Rock - slide-01.png",
-          "url": "https://riocafe956-png.github.io/cnp-digital-signage/facebook-collages/auto/102468197794520_1789554052640544/slide-01.png",
-          "duration": 15
-        }
-      ]
+      "slides": []
     }
   }
 }
