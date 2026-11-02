@@ -1,8 +1,8 @@
 {
   "campus": "Grulla High School",
-  "date": "2026-11-01",
-  "displayDate": "Sunday, November 1, 2026",
-  "status": "WEEKEND",
+  "date": "2026-11-02",
+  "displayDate": "Monday, November 2, 2026",
+  "status": "NO_MENU",
   "title": "TODAY'S LUNCH MENU",
   "lunchItems": [],
   "duration": 30
