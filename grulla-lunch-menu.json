@@ -1,25 +1,21 @@
 {
   "campus": "Grulla High School",
-  "date": "2026-11-03",
-  "displayDate": "Tuesday, November 3, 2026",
+  "date": "2026-11-04",
+  "displayDate": "Wednesday, November 4, 2026",
   "status": "AVAILABLE",
   "title": "TODAY'S LUNCH MENU",
   "lunchItems": [
-    "Fruitastic Yogurt Tray",
-    "Hamburger",
-    "Cheese Burger",
-    "Rodeo Burger",
-    "Roasted Red Potatoes",
-    "Fresh Burger Salad",
-    "Fresh Baby Carrots",
-    "Fresh Juicy Orange",
-    "Fresh Grapes"
+    "Chicken Tenders & Chef Salad",
+    "Chicken Flautas",
+    "Cheese Enchiladas",
+    "Refried Beans",
+    "Fresh Cabbage Salad",
+    "Cilantro Rice",
+    "Fruit  Banana",
+    "Fresh Cantaloupe"
   ],
-  "featuredEntree": "Hamburger",
+  "featuredEntree": "Chicken Flautas",
   "duration": 30,
-  "featuredPhoto": {
-    "name": "Hamburger.png",
-    "url": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/Hamburger.png"
-  },
+  "featuredPhoto": null,
   "fallbackImage": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/cnp-logo.png"
 }
