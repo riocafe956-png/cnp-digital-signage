@@ -1,23 +1,9 @@
 {
   "campus": "Grulla High School",
-  "date": "2026-11-06",
-  "displayDate": "Friday, November 6, 2026",
-  "status": "AVAILABLE",
+  "date": "2026-11-07",
+  "displayDate": "Saturday, November 7, 2026",
+  "status": "WEEKEND",
   "title": "TODAY'S LUNCH MENU",
-  "lunchItems": [
-    "Chicken Nuggets",
-    "Spicy Chicken Nuggets",
-    "Macn'cheese",
-    "Carrot coins",
-    "Roasted Cauliflower",
-    "Buffalo Roasted Cauliflower",
-    "Fresh Juicy Orange",
-    "Fruit Pear",
-    "Craisin Crunch Pack",
-    "Milk Asst."
-  ],
-  "featuredEntree": "Spicy Chicken Nuggets",
-  "duration": 30,
-  "featuredPhoto": null,
-  "fallbackImage": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/cnp-logo.png"
+  "lunchItems": [],
+  "duration": 30
 }
