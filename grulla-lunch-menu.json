@@ -1,22 +1,9 @@
 {
   "campus": "Grulla High School",
-  "date": "2026-11-13",
-  "displayDate": "Friday, November 13, 2026",
-  "status": "AVAILABLE",
+  "date": "2026-11-14",
+  "displayDate": "Saturday, November 14, 2026",
+  "status": "WEEKEND",
   "title": "TODAY'S LUNCH MENU",
-  "lunchItems": [
-    "Chicken Alfredo",
-    "Homemade Italian Roll",
-    "Italian Kaiser",
-    "Warm Marinara Sauce",
-    "Italian Salad",
-    "Mix Vegetables",
-    "Fruit Juicy Oranges",
-    "Craisin Crunch Pack",
-    "Milk Asst."
-  ],
-  "featuredEntree": "Homemade Italian Roll",
-  "duration": 30,
-  "featuredPhoto": null,
-  "fallbackImage": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/cnp-logo.png"
+  "lunchItems": [],
+  "duration": 30
 }
