@@ -5,6 +5,7 @@
   "status": "AVAILABLE",
   "title": "TODAY'S LUNCH MENU",
   "lunchItems": [
+    "Marinara  Dipping Sauce",
     "Pepperoni Pizza",
     "Marinara  Dipping Sauce",
     "Fresh Garden Salad",
@@ -13,7 +14,7 @@
     "Craisin Crunch Pack",
     "Milk Asst."
   ],
-  "featuredEntree": "Marinara  Dipping Sauce",
+  "featuredEntree": "Pepperoni Pizza",
   "duration": 30,
   "featuredPhoto": null,
   "fallbackImage": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/cnp-logo.png"
