@@ -1,20 +1,18 @@
 {
   "campus": "Grulla High School",
-  "date": "2026-11-16",
-  "displayDate": "Monday, November 16, 2026",
+  "date": "2026-11-17",
+  "displayDate": "Tuesday, November 17, 2026",
   "status": "AVAILABLE",
   "title": "TODAY'S LUNCH MENU",
   "lunchItems": [
-    "Marinara  Dipping Sauce",
-    "Pepperoni Pizza",
-    "Marinara  Dipping Sauce",
-    "Fresh Garden Salad",
-    "Fruit Oranges",
-    "Fruit Grapes",
+    "Mini corndogs",
+    "Cheesy Broccoli",
+    "Garbanzo Bean Soup",
+    "Fruit Watermelon",
     "Craisin Crunch Pack",
     "Milk Asst."
   ],
-  "featuredEntree": "Pepperoni Pizza",
+  "featuredEntree": "Cheesy Broccoli",
   "duration": 30,
   "featuredPhoto": null,
   "fallbackImage": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/cnp-logo.png"
