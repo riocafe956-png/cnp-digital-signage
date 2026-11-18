@@ -1,19 +1,30 @@
 {
   "campus": "Grulla High School",
-  "date": "2026-11-17",
-  "displayDate": "Tuesday, November 17, 2026",
+  "date": "2026-11-18",
+  "displayDate": "Wednesday, November 18, 2026",
   "status": "AVAILABLE",
   "title": "TODAY'S LUNCH MENU",
   "lunchItems": [
-    "Mini corndogs",
-    "Cheesy Broccoli",
-    "Garbanzo Bean Soup",
-    "Fruit Watermelon",
+    "Turkey Day",
+    "Fruitastic Yogurt Tray",
+    "Turkey Roast",
+    "Poultry Gravy",
+    "Hot Roll",
+    "Whipped Potatoes",
+    "Brown Gravy",
+    "Cranberry Sauce",
+    "Green Beans Casserole",
+    "Stuffing",
+    "Sweet Potato Trifle",
+    "Fruited Gelatin/ Cranberry Gelatin",
     "Craisin Crunch Pack",
     "Milk Asst."
   ],
-  "featuredEntree": "Cheesy Broccoli",
+  "featuredEntree": "Fruitastic Yogurt Tray",
   "duration": 30,
-  "featuredPhoto": null,
+  "featuredPhoto": {
+    "name": "Fruitastic Yogurt Tray.png",
+    "url": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/Fruitastic%20Yogurt%20Tray.png"
+  },
   "fallbackImage": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/cnp-logo.png"
 }
