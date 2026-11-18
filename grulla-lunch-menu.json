@@ -5,7 +5,6 @@
   "status": "AVAILABLE",
   "title": "TODAY'S LUNCH MENU",
   "lunchItems": [
-    "Turkey Day",
     "Fruitastic Yogurt Tray",
     "Turkey Roast",
     "Poultry Gravy",
@@ -20,11 +19,8 @@
     "Craisin Crunch Pack",
     "Milk Asst."
   ],
-  "featuredEntree": "Fruitastic Yogurt Tray",
+  "featuredEntree": "Turkey Roast",
   "duration": 30,
-  "featuredPhoto": {
-    "name": "Fruitastic Yogurt Tray.png",
-    "url": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/Fruitastic%20Yogurt%20Tray.png"
-  },
+  "featuredPhoto": null,
   "fallbackImage": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/cnp-logo.png"
 }
