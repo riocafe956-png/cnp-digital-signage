@@ -1,20 +1,9 @@
 {
   "campus": "Grulla High School",
-  "date": "2026-11-20",
-  "displayDate": "Friday, November 20, 2026",
-  "status": "AVAILABLE",
+  "date": "2026-11-21",
+  "displayDate": "Saturday, November 21, 2026",
+  "status": "WEEKEND",
   "title": "TODAY'S LUNCH MENU",
-  "lunchItems": [
-    "Bean Cheese Burrito",
-    "Cheese Sauce",
-    "Sweet Potato Waffle Fries",
-    "Fresh Burger Salad",
-    "Fruit     Orange",
-    "Craisin Crunch Pack",
-    "Milk Asst."
-  ],
-  "featuredEntree": "Cheese Sauce",
-  "duration": 30,
-  "featuredPhoto": null,
-  "fallbackImage": "https://riocafe956-png.github.io/cnp-digital-signage/food-images/cnp-logo.png"
+  "lunchItems": [],
+  "duration": 30
 }
